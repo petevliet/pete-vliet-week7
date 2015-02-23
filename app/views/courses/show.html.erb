@@ -1,7 +1,13 @@
 <center>
   <h1> <%= @course.title %> </h1>
 
-  <h3> <%= @course.day_night %> </h3>
+  <h3>
+    <% if @course.day_night == true %>
+      <%= 'Day' %>
+    <% else %>
+      <%= 'Night' %>
+    <% end %>
+  </h3>
 
 </center>
 

@@ -6,9 +6,9 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
 <br />
-  <!-- <%= f.label :password %>
-  <%= f.password_field :password %>
-<br /> -->
+  <%= f.label 'Day?' %>
+  <%= f.check_box (:day_night) %>
+<br />
   <%= f.submit %>
 <br />
   <%= link_to 'cancel', courses_path %>
