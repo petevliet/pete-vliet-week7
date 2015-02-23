@@ -1,0 +1,23 @@
+<h1>Courses</h1>
+
+<%= link_to 'New Course', new_course_path %>
+<br>
+<%= link_to 'Users', root_path %>
+<br>
+
+<table>
+  <thead>
+    <td>Title</td>
+    <td>Day/Night?</td>
+  </thead>
+  <tbody>
+    <% @courses.each do |course| %>
+    <tr>
+      <td> <%= link_to course.title, course_path(course) %> </td>
+      <td> <%= course.day_night %> </td>
+      <td> <%= link_to 'Edit', edit_course_path(course) %> </td>
+      <td> <%= link_to 'Delete', course, method: :delete %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

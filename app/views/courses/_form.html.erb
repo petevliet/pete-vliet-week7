@@ -1,0 +1,13 @@
+<%= form_for @course do |f| %>
+<br />
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+<br />
+  <!-- <%= f.label :password %>
+  <%= f.password_field :password %>
+<br /> -->
+  <%= f.submit %>
+<br />
+  <%= link_to 'cancel', courses_path %>
+
+<% end %>
