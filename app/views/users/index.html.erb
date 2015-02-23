@@ -1,0 +1,20 @@
+<h1>Users</h1>
+
+<%= link_to 'New User', new_user_path %>
+<br>
+<br>
+
+<table>
+  <thead>
+    <td>User Name</td>
+    <td>About</td>
+  </thead>
+  <tbody>
+    <% @user.each do |user| %>
+    <td> <%= link_to user.user_name, user_path(user) %> </td>
+    <td> <%= user.about %> </td>
+    <td> <%= link_to 'Edit', edit_user_path(user) %> </td>
+    <td> <%= link_to 'Delete', user, method: :delete %>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,10 @@
+<center>
+  <h1> <%= @user.user_name %> </h1>
+
+  <h3> <%= @user.about %> </h3>
+
+</center>
+
+<%= link_to 'back', root_path %>
+<%= link_to 'edit', edit_user_path(@user) %>
+<%= link_to 'delete', @user, method: :delete %>
