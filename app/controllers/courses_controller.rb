@@ -18,7 +18,7 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
 
     if @course.save
-      redirect_to courses_path
+      redirect_to course_path(@course)
       flash[:notice] = 'New course added'
     else
       render :new
