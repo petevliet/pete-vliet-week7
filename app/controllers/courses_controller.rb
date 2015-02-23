@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
 
+  before_action :authenticate, except: [:index, :show]
+
   def index
     @courses = Course.all
   end
