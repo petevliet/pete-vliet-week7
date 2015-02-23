@@ -12,10 +12,12 @@
   </thead>
   <tbody>
     <% @users.each do |user| %>
-    <td> <%= link_to user.user_name, user_path(user) %> </td>
-    <td> <%= user.about %> </td>
-    <td> <%= link_to 'Edit', edit_user_path(user) %> </td>
-    <td> <%= link_to 'Delete', user, method: :delete %>
+    <tr>
+      <td> <%= link_to user.user_name, user_path(user) %> </td>
+      <td> <%= user.about %> </td>
+      <td> <%= link_to 'Edit', edit_user_path(user) %> </td>
+      <td> <%= link_to 'Delete', user, method: :delete %>
+      </tr>
     <% end %>
   </tbody>
 </table>

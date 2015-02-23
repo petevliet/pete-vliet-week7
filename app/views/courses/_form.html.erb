@@ -1,4 +1,7 @@
 <%= form_for @course do |f| %>
+
+<%= render partial: 'shared/errors', locals: {object: @course} %>
+
 <br />
   <%= f.label :title %>
   <%= f.text_field :title %>

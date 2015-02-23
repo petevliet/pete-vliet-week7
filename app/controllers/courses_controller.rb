@@ -19,6 +19,7 @@ class CoursesController < ApplicationController
 
     if @course.save
       redirect_to courses_path
+      flash[:notice] = 'New course added'
     else
       render :new
     end
@@ -33,6 +34,7 @@ class CoursesController < ApplicationController
 
     if @course.update(course_params)
       redirect_to course_path(@course)
+      flash[:notice] = 'Course updated'
     else
       render :edit
     end
@@ -43,6 +45,7 @@ class CoursesController < ApplicationController
 
     @course.destroy
     redirect_to courses_path
+    flash[:notice] = 'Course deleted'
   end
 
   private

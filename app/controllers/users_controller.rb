@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
     if @user.save
       redirect_to root_path
+      flash[:notice] = 'new user created'
     else
       render :new
     end
@@ -31,6 +32,7 @@ class UsersController < ApplicationController
 
     if @user.update(user_params)
       redirect_to root_path
+      flash[:notice] = 'user updated'
     else
       render :edit
     end
@@ -41,6 +43,7 @@ class UsersController < ApplicationController
 
     @user.destroy
     redirect_to root_path
+    flash[:notice] = 'user destroyed'
   end
 
   private
